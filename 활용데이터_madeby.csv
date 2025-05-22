@@ -1,0 +1,4 @@
+﻿incident_id,date,Alleged deployer of AI system,risk_domain,Entity,Intent,severity,deployer_category,developer_category
+1,2024-04-16,"[""twitter""]",3. Misinformation,AI,Unintentional,0.4,regulated_corporation,regulated_corporation
+2,2023-11-01,"[""air-canada""]",3. Misinformation,AI,Unintentional,0.55,regulated_corporation,unregulated_startup
+3,2023-05-01,"[""openai""]",3. Misinformation,AI,Unintentional,0.7,freelancer_or_individual,regulated_corporation
