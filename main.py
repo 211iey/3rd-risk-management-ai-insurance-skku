@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from pycaret.regression import load_model
 # import joblib
-from predict_frequency import predict
+from sklearn.preprocessing import LabelEncoder
 
 def load_file(file_path):
     df = pd.read_csv(file_path)
@@ -44,6 +44,17 @@ def weight(df, weight_dict):
     df['developer_weight'] = df['developer_category'].map(developer_weights)
 
     return df
+
+def predict(model, df):
+    df = df.copy()
+
+    features = ['Alleged deployer of AI system', 'risk_domain', 'Entity', 'Intent', 'developer_category', 'year', 'month']
+    cat_cols = ['Alleged deployer of AI system', 'risk_domain', 'Entity', 'Intent', 'developer_category']
+    for col in cat_cols:
+        df[col] = LabelEncoder().fit_transform(df[col].astype(str))
+
+    X = df[features]
+    return model.predict(X)
 
 def raf(df):
     X = df[['developer_weight', 'deployer_weight']]
