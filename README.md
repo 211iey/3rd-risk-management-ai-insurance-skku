@@ -30,6 +30,6 @@
 - 리스크 스코어링: 예측된 frequency, severity, RAF(위험 조정계수)를 기반으로 expected_loss 계산 및 위험군 분류
 
 ### 참고
-본 프로젝트는 제3회 전국 대학생 리스크 관리 경진대회 출품작입니다.
-모델링 및 데이터 전처리에 사용된 언어: Python, R
+본 프로젝트는 제3회 전국 대학생 리스크 관리 경진대회 출품작입니다.<br>
+모델링 및 데이터 전처리에 사용된 언어: Python, R<br>
 주요 라이브러리: PyCaret, scikit-learn, statsmodels, GAMLSS, NumPy, pandas
